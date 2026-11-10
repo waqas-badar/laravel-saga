@@ -16,7 +16,7 @@
     ],
     "require": {
         "php": "^8.2",
-        "waqas-badar/php-saga": "*",
+        "waqas-badar/php-saga": "^1.0.1",
         "illuminate/contracts": "^10.0 || ^11.0 || ^12.0 || ^13.0",
         "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0",
         "illuminate/database": "^10.0 || ^11.0 || ^12.0 || ^13.0",
@@ -50,16 +50,6 @@
             }
         }
     },
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../php-saga",
-            "options": {
-                "symlink": false
-            }
-        }
-    ],
     "minimum-stability": "dev",
     "prefer-stable": true
 }
-
