@@ -1,0 +1,65 @@
+{
+    "name": "waqas-badar/laravel-saga",
+    "description": "Saga Pattern orchestrator for Laravel distributed transactions and workflows.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Waqas Badar",
+            "email": "mwaqasbadar@yahoo.com",
+            "role": "Lead Developer"
+        },
+        {
+            "name": "Antigravity (Google DeepMind)",
+            "role": "AI Pair Programmer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "waqas-badar/php-saga": "*",
+        "illuminate/contracts": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/database": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/events": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/console": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/bus": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/queue": "^10.0 || ^11.0 || ^12.0 || ^13.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0 || ^11.0",
+        "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0",
+        "mockery/mockery": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelSaga\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaravelSaga\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelSaga\\SagaServiceProvider"
+            ],
+            "aliases": {
+                "Saga": "LaravelSaga\\Facades\\Saga"
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../php-saga",
+            "options": {
+                "symlink": false
+            }
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
+

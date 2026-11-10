@@ -1,0 +1,22 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use PhpSaga\AbstractSaga;
+use PhpSaga\Execution\SagaBuilder;
+
+class {{ class }} extends AbstractSaga
+{
+    /**
+     * Configure the sequence of steps and failure policies for this saga.
+     */
+    public function configure(SagaBuilder $builder): void
+    {
+        // $builder
+        //     ->addStep(FirstStep::class)
+        //     ->addStep(SecondStep::class);
+    }
+}
+

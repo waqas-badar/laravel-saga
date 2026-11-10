@@ -1,0 +1,36 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use PhpSaga\Contracts\StepInterface;
+use PhpSaga\SagaContext;
+
+class {{ class }} implements StepInterface
+{
+    /**
+     * Get the unique name of this step.
+     */
+    public function getName(): string
+    {
+        return '{{ class }}';
+    }
+
+    /**
+     * Execute the forward business action.
+     */
+    public function execute(SagaContext $context): void
+    {
+        // Forward execution logic
+    }
+
+    /**
+     * Compensate (undo) the actions taken in execute.
+     */
+    public function compensate(SagaContext $context): void
+    {
+        // Compensating rollback logic
+    }
+}
+
